@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --main-color: #FFF;
+    --tab-color: #FFF;
+    --font-color: #000;
+    --font2-color: #494949;
+    --hover-color: #ec6f5e;
+}
+
+*{
+    font-family: 'Lato', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: lowercase;
+    transition: all .2s linear;
+    line-height: 2;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--main-color);
+    padding-left: 30rem;
+}
+
+section{
+    padding:1rem 5%;
+    min-height: 100vh;
+}
+
+header{
+    position: fixed;
+    top:0; left:0; bottom:0;
+    background: var(--tab-color);
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    z-index: 1000;
+    flex-flow: column;
+    padding: 8rem 3rem 5rem 3rem;
+    width: 27rem;
+    text-align: left;
+}
+
+header .mainmenu .logo{
+    cursor: default;
+    text-transform: capitalize;
+    color: var(--font-color);
+    font-size: 3rem;
+    font-style: italic;
+}
+
+header .mainmenu .navbar a{
+    display: block;
+    transform: translate(0%, 90%);
+    font-size: 1.5rem;
+    color: var(--font-color);
+}
+
+header .mainmenu .navbar a:hover{
+    color: var(--hover-color);
+}
+
+header .follow a{
+    font-size: 1.5rem;
+    color: var(--font-color);
+    margin: 0 .7rem;
+    line-height: 2;
+}
+
+header .follow a span{
+    color: var(--font2-color);
+}
+
+header .follow a:hover{
+    text-decoration: underline;
+}
+
+#menu-bars{
+    position: fixed;
+    top:1rem; right:1rem;
+    z-index: 10000;
+    background: var(--tab-color);
+    color: var(--font-color);
+    border-radius: .5rem;
+    padding: 1rem 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 800px) {
+    html{
+        font-size: 55%;
+    }
+
+    body{
+        padding: 0;
+    }
+
+    #menu-bars{
+        display: initial;
+    }
+
+    header{
+        left: -120%;
+    }
+
+    header.active{
+        left: 0%;
+    }
+}
+
+@media (max-width: 580px) {
+    html{
+        font-size: 50%;
+    }
+
+    header{
+        width: 100%;
+    }
+}
+
+.home{
+    display: flex;
+    align-items:flex-start;
+    padding: 20rem 3rem 5rem 4rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.home .image{
+    flex:1 1 40rem; 
+}
+
+.home .image img{
+    width: 70%;  
+    opacity: 70%;
+    transform: translate(70%, -70%);
+}
+
+.home .content{
+    flex:1 1 40rem; 
+}
+
+.home .content h1{
+    width:100rem;
+    font-style: italic;
+    font-weight: 400;
+    text-transform:uppercase;
+    font-size:3.5rem;
+    color: var(--font2-color);
+}
+
+.home .content span{
+    text-transform:uppercase;
+    color: var(--hover-color);
+}
+
+.home .content h3{
+    height: 7rem;
+    font-style: italic;
+    font-weight: 400;
+    text-transform:uppercase;
+    font-size:2.5rem;
+    color: var(--font2-color); 
+}
+
+.home .row{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size:1.5rem;
+    color: var(--font2-color);
+    gap: 10rem;
+}
+
+.home .column{
+    text-transform: none;
+    width: 50rem;
+    height:15rem;
+    float: left;
+    font-size:1.5rem;
+    color: var(--font2-color);
+}
+
+.home .column p{
+    text-transform: none;
+    padding-bottom: 1.5rem;
+}
+
+.home .skills{
+    width: 20rem;
+    height:20rem;
+    font-size:1.5rem;
+    color: var(--font2-color);
+}
+
+.home .skills .tools{
+    text-transform: none;
+    font-weight: 700;
+}
+
+.home .skills pre{
+    transform: translate(-20%);
+    text-transform: none;
+    margin: 0rem;
+}
+
+.home .links{
+    font-size:1.5rem;
+    color: var(--font2-color);
+}
+
+.portfolio h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-style:italic;
+    color: var(--font2-color);
+    text-transform: capitalize;
+    padding: 7.5rem 1rem 3rem 0rem;
+}
+
+.portfolio .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.portfolio .box-container .box{
+    flex:1 1 30rem;
+    height:25rem;
+    position: relative;
+    overflow:hidden;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.portfolio .box-container .box img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    position: relative;
+    
+}
+
+.portfolio .box-container .box .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0,0,0,.2);
+}
+
+.portfolio .box-container .box h3{
+    position: absolute;
+    bottom: 1.5rem; left:1rem;
+    font-size: 2rem;
+    color: #eeeeee;
+    text-transform: uppercase;
+}
+
+.portfolio .box-container .box h4{
+    position: absolute;
+    bottom: 0rem; left:1rem;
+    font-size: 1.5rem;
+    color: #eeeeee;
+    text-transform: uppercase;
+}
+
+.portfolio .box-container .box:hover .overlay{
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*---------*/
+
+.code h1{
+    font-size: 2.5rem;
+    font-style:italic;
+    font-weight: 400;
+    color: var(--font2-color);
+    text-transform: capitalize;
+    padding: 7.5rem 1rem 3rem 0rem;
+}
+
+.code .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.code .box-container .box{
+    flex:1 1 30rem;
+    height:25rem;
+    position: relative;
+    overflow:hidden;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.code .box-container .box img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    position: relative;
+}
+
+.code .box-container .box .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0,0,0,.2);
+}
+
+.code .box-container .box h3{
+    position: absolute;
+    bottom: 1.5rem; left:1rem;
+    font-size: 2rem;
+    color: #eeeeee;
+    text-transform: uppercase;
+}
+
+.code .box-container .box h4{
+    position: absolute;
+    bottom: 0rem; left:1rem;
+    font-size: 1.5rem;
+    color: #eeeeee;
+    text-transform: uppercase;
+}
+
+.code .box-container .box:hover .overlay{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.mainimage {
+    display: flex;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin:0 0 5rem 0;
+    padding: 0rem 0rem 0rem 6rem;
+    max-width: 900px;
+}
+
+.mainimage .box{
+    display: flex;
+    flex:1 1 30rem;
+    position: relative;
+    overflow:hidden;
+    width: 100%;
+}
+
+.mainimage .box img{
+    height:inherit;
+    width:100%;
+    object-fit:cover;
+    position: relative;
+}
+
+.mainimage .titlecard {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 4rem;
+}
+
+.mainimage .titlecard .title{
+    margin-bottom: 1rem;
+}
+
+.mainimage .titlecard .title h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.mainimage .titlecard .content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    font-size:1.5rem;
+    color: var(--font2-color);
+    gap: 5rem;
+    margin: 0 2rem 0 0;
+}
+
+.mainimage .titlecard .content .specifics{
+    width: 30%;
+    flex-shrink: 1;
+}
+
+.mainimage .titlecard .content .specifics p span{
+    font-style: italic;
+}
+
+.mainimage .titlecard .content .description{
+    width: 60%;
+}
+
+@media (min-width: 1200px) {
+    .mainimage .titlecard .content .description{
+        width: 70%;
+    }
+}
+
+.extracontent {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 10rem;
+    margin:10rem 0 10rem 0;
+    padding: 0rem 0rem 0rem 6rem;
+    max-width: 900px;
+    max-height: fit-content;
+    min-height: auto;
+}
+
+.extracontent .box{
+    display: flex;
+    flex:1 1 30rem;
+    position: relative;
+    overflow:hidden;
+    width: 100%;
+    height: 46rem;
+}
+
+.extracontent .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    position: relative;
+}
+
+.extracontent .rightcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5rem;
+    width: 40%;
+}
+
+.extracontent .rightcolumn .box {
+    display: flex;
+    flex:1 1 30rem;
+    position: relative;
+    overflow:hidden;
+    height: 35rem;
+}
+
+.extracontent .rightcolumn .box img{
+    width: inherit;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    position: relative;
+}
+
+.extracontent .rightcolumn .righttext {
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: none;
+    margin: 0 2rem 0 0;
+}
+
+@media (max-width: 900px) {
+    .extracontent{
+        flex-direction: column;
+    }
+
+    .extracontent .rightcolumn{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5rem;
+    margin:5rem 0 6.5rem 0;
+    padding: 0rem 0rem 0rem 6rem;
+    max-width: 900px;
+    min-height: auto;
+}
+
+.gallery .box {
+    display: flex;
+    flex:1 1 15rem;
+    position: relative;
+    overflow:hidden;
+}
+
+.gallery .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 50%;
+    position: relative;
+}
+
+@media (max-width: 450px) {
+    .section {
+        min-height: 50vh;
+    }
+
+    .gallery {
+        gap: 2rem;
+    }
+}
+
+.footer {
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    gap: 1rem;
+    margin: 0 2rem 5rem 6rem;
+    padding: 0;
+    max-width: 900px;
+}
+
+.footer .back a{
+    text-decoration: none;
+    color: var(--font2-color);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.footer .back a:hover{
+    text-decoration: underline;
+}
+
+.footer .prevnext{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.footer .prevnext a{
+    text-decoration: none;
+    color: var(--font2-color);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.footer .prevnext a:hover{
+    text-decoration: underline;
+}
+
+
+
+
