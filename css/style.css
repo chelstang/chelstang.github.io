@@ -234,7 +234,7 @@ header .follow a:hover{
     gap: 3rem;
 }
 
-.portfolio .box-container .box{
+.portfolio .box-container .pbox{
     flex:1 1 40rem;
     height:30rem;
     position: relative;
@@ -242,15 +242,14 @@ header .follow a:hover{
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
 
-.portfolio .box-container .box img{
+.portfolio .box-container .pbox img{
     height:100%;
     width:100%;
     object-fit:cover;
     position: relative;
-    
 }
 
-.portfolio .box-container .box .overlay{
+.portfolio .box-container .pbox .overlay{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -260,10 +259,10 @@ header .follow a:hover{
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0,0,0,.5);
 }
 
-.portfolio .box-container .box h3{
+.portfolio .box-container .pbox h3{
     position: absolute;
     bottom: 1.5rem; left:1rem;
     font-size: 2rem;
@@ -271,7 +270,7 @@ header .follow a:hover{
     text-transform: uppercase;
 }
 
-.portfolio .box-container .box h4{
+.portfolio .box-container .pbox h4{
     position: absolute;
     bottom: 0rem; left:1rem;
     font-size: 1.5rem;
@@ -279,7 +278,7 @@ header .follow a:hover{
     text-transform: uppercase;
 }
 
-.portfolio .box-container .box:hover .overlay{
+.portfolio .box-container .pbox:hover .overlay{
     opacity: 1;
     cursor: pointer;
 }
@@ -302,7 +301,7 @@ header .follow a:hover{
     margin-bottom: 5rem;
 }
 
-.code .box-container .box{
+.code .box-container .pbox{
     flex:1 1 30rem;
     height:25rem;
     position: relative;
@@ -310,14 +309,14 @@ header .follow a:hover{
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
 
-.code .box-container .box img{
+.code .box-container .pbox img{
     height:100%;
     width:100%;
     object-fit:cover;
     position: relative;
 }
 
-.code .box-container .box .overlay{
+.code .box-container .pbox .overlay{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -330,7 +329,7 @@ header .follow a:hover{
     background-color: rgba(0,0,0,.2);
 }
 
-.code .box-container .box h3{
+.code .box-container .pbox h3{
     position: absolute;
     bottom: 1.5rem; left:1rem;
     font-size: 2rem;
@@ -338,7 +337,7 @@ header .follow a:hover{
     text-transform: uppercase;
 }
 
-.code .box-container .box h4{
+.code .box-container .pbox h4{
     position: absolute;
     bottom: 0rem; left:1rem;
     font-size: 1.5rem;
@@ -346,7 +345,7 @@ header .follow a:hover{
     text-transform: uppercase;
 }
 
-.code .box-container .box:hover .overlay{
+.code .box-container .pbox:hover .overlay{
     opacity: 1;
     cursor: pointer;
 }
@@ -447,7 +446,7 @@ header .follow a:hover{
 .extracontent .box img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: 50% 50%;
     position: relative;
 }
@@ -457,7 +456,7 @@ header .follow a:hover{
     flex-direction: column;
     justify-content: flex-start;
     gap: 5rem;
-    width: 40%;
+    width: 50%;
 }
 
 .extracontent .rightcolumn .box {
@@ -471,7 +470,7 @@ header .follow a:hover{
 .extracontent .rightcolumn .box img{
     width: inherit;
     height: 100%;
-    object-fit: cover;
+    object-fit:contain;
     object-position: 50% 50%;
     position: relative;
 }
@@ -499,7 +498,6 @@ header .follow a:hover{
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: flex-start;
-    gap: 5rem;
     margin:5rem 0 6.5rem 0;
     padding: 0rem 0rem 0rem 6rem;
     max-width: 900px;
@@ -508,7 +506,8 @@ header .follow a:hover{
 
 .gallery .box {
     display: flex;
-    flex:1 1 15rem;
+    width: inherit;
+    height: 15rem;
     position: relative;
     overflow:hidden;
 }
