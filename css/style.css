@@ -136,22 +136,12 @@ header .follow a:hover{
     gap: 1rem;
 }
 
-.home .image{
-    flex:1 1 40rem; 
-}
-
-.home .image img{
-    width: 70%;  
-    opacity: 70%;
-    transform: translate(70%, -70%);
-}
-
 .home .content{
-    flex:1 1 40rem; 
+    flex:1 1 30rem; 
 }
 
 .home .content h1{
-    width:100rem;
+    width:auto;
     font-style: italic;
     font-weight: 400;
     text-transform:uppercase;
@@ -165,7 +155,7 @@ header .follow a:hover{
 }
 
 .home .content h3{
-    height: 7rem;
+    height: auto;
     font-style: italic;
     font-weight: 400;
     text-transform:uppercase;
@@ -184,8 +174,8 @@ header .follow a:hover{
 
 .home .column{
     text-transform: none;
-    width: 50rem;
-    height:15rem;
+    width: auto;
+    height:auto;
     float: left;
     font-size:1.5rem;
     color: var(--font2-color);
