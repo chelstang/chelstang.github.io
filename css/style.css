@@ -179,6 +179,7 @@ header .follow a:hover{
     float: left;
     font-size:1.5rem;
     color: var(--font2-color);
+    max-width: 550px;
 }
 
 .home .column p{
@@ -207,6 +208,15 @@ header .follow a:hover{
 .home .links{
     font-size:1.5rem;
     color: var(--font2-color);
+}
+
+.home .image{
+    flex: 1 1 40rem;
+
+}
+
+.home .image img{
+    width: 100%;
 }
 
 .portfolio h1{
