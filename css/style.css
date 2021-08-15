@@ -131,9 +131,9 @@ header .follow a:hover{
 .home{
     display: flex;
     align-items:flex-start;
-    padding: 25rem 3rem 5rem 4rem;
+    padding: 15rem 3rem 0rem 4rem;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 5rem;
 }
 
 .home .content{
@@ -169,7 +169,7 @@ header .follow a:hover{
     flex-wrap: wrap;
     font-size:1.5rem;
     color: var(--font2-color);
-    gap: 10rem;
+    gap: 5rem;
 }
 
 .home .column{
@@ -185,6 +185,81 @@ header .follow a:hover{
 .home .column p{
     text-transform: none;
     padding-bottom: 1.5rem;
+}
+
+.home svg{
+    max-width: 300px;
+    max-height: 300px;
+    transform: translateY(-5rem);
+}
+
+
+svg #artWindow{
+    animation-duration: 1.2s;
+    animation-name: animateArt;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+svg:hover #artWindow{
+    animation: animateArtHover 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateArtHover{
+    to{
+        transform:translateY(-130px);
+    }
+}
+
+svg:hover #codeWindow{
+    animation: animateCodeHover 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateCodeHover{
+    to{
+        transform:translateY(40px);
+    }
+}
+
+@keyframes animateArt{
+    from{
+        transform:translateY(0) translateX(0);
+    }
+    to{
+        transform:translateY(30px);
+    }
+}
+
+svg #codeWindow{
+    animation-duration: 1.2s;
+    animation-name: animateCode;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes animateCode{
+    from{
+        transform:translateY(0) translateX(0);
+    }
+    to{
+        transform:translateY(30px);
+    }
+}
+
+@media (max-width: 1285px) {
+    .home svg{
+        transform: translateX(12rem);
+    }
+}
+
+@media (max-width: 525px) {
+    .home svg{
+        transform: translateX(4rem);
+    }
 }
 
 .home .skills{
