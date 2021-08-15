@@ -250,6 +250,14 @@ svg #codeWindow{
     }
 }
 
+@media (min-width: 1385px) {
+    .home svg{
+        max-width: 400px;
+        max-height: 400px;
+        transform: translateY(-12rem);
+    }
+}
+
 @media (max-width: 1285px) {
     .home svg{
         transform: translateX(12rem);
@@ -258,7 +266,7 @@ svg #codeWindow{
 
 @media (max-width: 525px) {
     .home svg{
-        transform: translateX(4rem);
+        transform: translateX(2rem);
     }
 }
 
